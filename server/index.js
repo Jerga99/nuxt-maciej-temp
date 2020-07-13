@@ -6,11 +6,8 @@ const bodyParser = require('body-parser');
 const { Nuxt, Builder } = require('nuxt');
 const app = express();
 
-const filePath = './store/initial_data.json';
-const initialData = require(filePath);
-
 // Import and Set Nuxt.js options
-const config = require('./nuxt.config.js');
+const config = require('../nuxt.config.js');
 config.dev = !(process.env.NODE_ENV === 'production');
 
 async function start() {
